@@ -225,6 +225,12 @@ static void example_mmf2_video_surport(void)
 	//V1 timslapse mp4 example
 	//mmf2_video_example_timelapse_mp4_init();
 
+	// Dynamic ROI example with NN
+	// H264 -> RTSP  (V1)
+	// H264 -> RTSP (V2)
+	// RGB  -> NN object detect (V4)
+	//mmf2_video_example_dynamic_roi_rtsp_init();
+
 	video_init_done = 1;
 }
 
@@ -239,10 +245,6 @@ void video_example_main(void *param)
 	}
 
 	example_mmf2_video_surport();
-
-	// Disable video log
-	vTaskDelay(1000);
-	video_ctrl(0, VIDEO_DEBUG, 0);
 
 	// TODO: exit condition or signal
 	while (1) {

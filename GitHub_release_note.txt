@@ -1,6 +1,9 @@
 
 GitHub Update Note, sync with 9.6_r
 
+SHA-1: f0d0bb3528f913a6434436a26be632b150cc9b2b
+* [amebapro2][bt:controller] update BT normal patch
+
 SHA-1: da5f2bb73e9e03214e8742655b0b57ab31e0bb76
 * [amebapro2][pir] add pir sensor example
 

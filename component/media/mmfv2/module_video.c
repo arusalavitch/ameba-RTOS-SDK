@@ -68,7 +68,6 @@ static int show_fps = 0;
 static int ch_fps_cnt[CH_NUM]   = {0};
 static int cb_tick[CH_NUM]   = {0};
 static int ch_fps[CH_NUM]   = {0};
-static int ch_forcei[CH_NUM]   = {0};
 static int video_detect_sensor_id(void);
 void video_show_fps(int enable)
 {
@@ -177,85 +176,14 @@ void video_frame_complete_cb(void *param1, void  *param2, uint32_t arg)
 		VIDEO_DBG_INFO("nv12/nv16/rgb in = 0x%X\r\n", enc2out->isp_addr);
 	}
 #endif
-
-	// VOE status check
-	if (enc2out->cmd_status == VOE_OK) {
-		// Normal frame output
-		//printf("<<test>><%s><%d> %x\n", __func__, __LINE__, enc2out->cmd);
-		//force I filter, when force i, it will wait until get i frame
-		if (ch_forcei[enc2out->ch] == 1) {
-			if (enc2out->codec & (CODEC_H264 | CODEC_HEVC)) {
-				if (enc2out->codec == CODEC_H264 || enc2out->codec == CODEC_HEVC || enc2out->codec == (CODEC_H264 | CODEC_JPEG) ||
-					enc2out->codec == (CODEC_HEVC | CODEC_JPEG)) {
-					uint8_t *ptr = (uint8_t *)enc2out->enc_addr;
-					if (ptr[0] != 0 || ptr[1] != 0) {
-						VIDEO_DBG_ERROR("\r\nH264 stream error\r\n");
-						VIDEO_DBG_ERROR("\r\n(%d/%d) %x %x %x %x\r\n", enc2out->enc_len, enc2out->finish, *ptr, *(ptr + 1), *(ptr + 2), *(ptr + 3));
-						video_encbuf_release(enc2out->ch, enc2out->codec, enc2out->enc_len);
-						return;
-					}
-					if (enc2out->codec & (CODEC_H264)) {
-						int type = ptr[4] & 0x1F;
-						if (ptr[0] == 0 && ptr[1] == 0 && ptr[2] == 0 && ptr[3] == 1 && type == 0x07) {
-							ch_forcei[enc2out->ch] = 0;
-						} else {
-							//printf("release h264\r\n");
-							video_encbuf_release(enc2out->ch, enc2out->codec, enc2out->enc_len);
-							return;
-						}
-					}
-
-					if (enc2out->codec & (CODEC_HEVC)) {
-						int type = ptr[4];
-						if (ptr[0] == 0 && ptr[1] == 0 && ptr[2] == 0 && ptr[3] == 1 && type == 0x40) {
-							ch_forcei[enc2out->ch] = 0;
-						} else {
-							//printf("release h265\r\n");
-							video_encbuf_release(enc2out->ch, enc2out->codec, enc2out->enc_len);
-							return;
-						}
-					}
-				}
-			}
+	
+	if(ctx->dbg_ts_info) {
+		if(ctx->dbg_ts_info->timestamp_cnt < MMF_VIDEO_DBG_TS_MAX_CNT) {
+			ctx->dbg_ts_info->timestamp[ctx->dbg_ts_info->timestamp_cnt] = timestamp;
+			ctx->dbg_ts_info->timestamp_cnt++;
 		}
-		if(ctx->dbg_ts_info) {
-			if(ctx->dbg_ts_info->timestamp_cnt < MMF_VIDEO_DBG_TS_MAX_CNT) {
-				ctx->dbg_ts_info->timestamp[ctx->dbg_ts_info->timestamp_cnt] = timestamp;
-				ctx->dbg_ts_info->timestamp_cnt++;
-			}
-		}
-		ctx->frame_cnt++;
-	} else {
-		// Video error handle
-
-		switch (enc2out->cmd_status) {
-		case VOE_ENC_BUF_OVERFLOW:
-		case VOE_ENC_QUEUE_OVERFLOW:
-			VIDEO_DBG_WARNING("VOE CH%d ENC %s full (queue/used/out/rsvd) %d/%dKB%dKB%dKB\n"
-							  , enc2out->ch
-							  , enc2out->cmd_status == VOE_ENC_BUF_OVERFLOW ? "buff" : "queue"
-							  , enc2out->enc_time
-							  , enc2out->enc_used >> 10
-							  , ctx->params.out_buf_size >> 10
-							  , ctx->params.out_rsvd_size >> 10);
-			video_encbuf_clean(enc2out->ch, CODEC_H264 | CODEC_HEVC);
-			video_ctrl(enc2out->ch, VIDEO_FORCE_IFRAME, 1);
-			break;
-		case VOE_JPG_BUF_OVERFLOW:
-		case VOE_JPG_QUEUE_OVERFLOW:
-			VIDEO_DBG_WARNING("VOE CH%d JPG %s full (queue/used/out/rsvd) %d/%dKB\n"
-							  , enc2out->ch
-							  , enc2out->cmd_status == VOE_JPG_BUF_OVERFLOW ? "buff" : "queue"
-							  , enc2out->jpg_time
-							  , enc2out->jpg_used >> 10);
-			//video_encbuf_clean(enc2out->ch, CODEC_JPEG);
-			break;
-		default:
-			VIDEO_DBG_ERROR("Error CH%d VOE cmd %x status %x\n", enc2out->ch, enc2out->cmd, enc2out->cmd_status);
-			break;
-		}
-		return;
 	}
+	ctx->frame_cnt++;
 
 	if(ctx->frame_drop_interval) {
 		if(ctx->frame_cnt % ctx->frame_drop_interval != 1) {
@@ -555,7 +483,6 @@ int video_control(void *p, int cmd, int arg)
 	break;
 	case CMD_VIDEO_FORCE_IFRAME: {
 		ret = video_ctrl(ch, VIDEO_FORCE_IFRAME, arg);
-		ch_forcei[ch] = 1;
 	}
 	break;
 	case CMD_VIDEO_BPS: {
@@ -850,6 +777,14 @@ int video_control(void *p, int cmd, int arg)
 	}
 	case CMD_VIDEO_SET_CAP_INTVL: {
 		ctx->frame_drop_interval = ctx->params.fps * arg;
+		break;
+	}
+	case CMD_VIDEO_SET_DYN_ROI: {
+		ret = video_ctrl(ch, VIDEO_SET_DYN_ROI, arg);
+		break;
+	}
+	case CMD_VIDEO_GET_ROI_STAT: {
+		ret = video_ctrl(ch, VIDEO_GET_ROI_STAT, arg);
 		break;
 	}
 }

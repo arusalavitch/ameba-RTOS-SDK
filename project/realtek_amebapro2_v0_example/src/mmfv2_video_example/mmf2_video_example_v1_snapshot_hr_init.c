@@ -34,8 +34,15 @@ Usage Guide:
 	#define USE_VIDEO_HR_FLOW 1
 
 3. Disable OSD function
-	component\media\mmfv2\module_video.c
-	#define OSD_ENABLE 0
+	(1) Normal Mode
+		component\media\mmfv2\module_video.c
+		#define OSD_ENABLE 0
+
+	(2) FCS Mode
+		component\video\driver\RTL8735B\video_user_boot.c
+		video_boot_stream_t video_boot_stream = {
+			.isp_info.osd_enable = 0,
+		}
 
 4. For FCS mode, set voe heap to 45MB
 	component\video\driver\RTL8735B\video_boot.c
@@ -46,18 +53,7 @@ Usage Guide:
 			voe_heap_size = 45 * 1024 * 1024;
 	}
 
-5. To enable burst mode, define BURST_MODE_MAX_COUNT larger than 1. For DDR 128M, maaximun can set to 2.
-	#define BURST_MODE_MAX_COUNT 2
-
-	When the heap size required for burst mode is insufficient, it is recommended to reduce the DDR size used by the NN.
-	However, if the NN needs to be used concurrently, ensure that the required DDR space is adequate.
-
-	Modify NN DDR size in both rtl8735b_ram.ld and rtl8735b_boot_mp.ld
-	project\realtek_amebapro2_v0_example\GCC-RELEASE\application\rtl8735b_ram.ld
-	project\realtek_amebapro2_v0_example\GCC-RELEASE\bootloader\rtl8735b_boot_mp.ld
-	NN_SIZE = 8;
-
-6. The AINR function is supported only on the IMX681 sensor and requires exposure gain greater than 12x.
+5. The AINR function is supported only on the IMX681 sensor and requires exposure gain greater than 12x.
 	(1) #define ENABLE_AINR 1
 	(2) select correct AINR model in amebapro2_fwfs_nn_models.json
 		project\realtek_amebapro2_v0_example\GCC-RELEASE\mp\amebapro2_fwfs_nn_models.json
@@ -84,14 +80,26 @@ Usage Guide:
 		}
 	(3) AINR requires 12M DDR. With total DDR = 128 MB, burst mode is not supported.
 
+Burst mode:
+
+	To enable burst mode, define BURST_MODE_MAX_COUNT larger than 1. For DDR 128M, maaximun can set to 2.
+	#define BURST_MODE_MAX_COUNT 2
+
+	When the heap size required for burst mode is insufficient, it is recommended to reduce the DDR size used by the NN.
+	However, if the NN needs to be used concurrently, ensure that the required DDR space is adequate.
+
+	Modify NN DDR size in both rtl8735b_ram.ld and rtl8735b_boot_mp.ld
+	project\realtek_amebapro2_v0_example\GCC-RELEASE\application\rtl8735b_ram.ld
+	project\realtek_amebapro2_v0_example\GCC-RELEASE\bootloader\rtl8735b_boot_mp.ld
+	NN_SIZE = 8;
 
 ====================================================================
 Output 12M JPEG Flow:
 1. FCS bringup low resolution video and get converge AE, AWB value.
 2. Get 12M raw.
-3. Split 12M raw into two 6M raw.
-4. Sent two 6M raw into VOE and ouput to two 6M NV12 image.
-5. Merge two 6M NV12 into 12M NV12 image.
+3. Split 12M raw into 4 x 3M raw.
+4. Sent 4 x 3M raw into VOE and ouput to 4 x 3M NV12 image.
+5. Merge 4 x 3M NV12 into 12M NV12 image.
 6. Convert 12M NV12 image to 12M JPEG image.
 ====================================================================
 */
@@ -508,6 +516,7 @@ static int hr_init_ae_awb(video_pre_init_params_t *init_params, int wait_ae_time
 	init_params->video_drop_enable = 0;
 	init_params->dyn_iq_mode = 0;
 	init_params->init_isp_items.init_wdr_mode = WDR_AUTO;
+	init_params->init_isp_items.init_wdr_level = 50;
 	init_params->init_max_dyn_region_en = 1;
 	init_params->sens_pwr_dis = 0;
 	mm_module_ctrl(video_v1_ctx, CMD_VIDEO_PRE_INIT_PARM, (int)init_params);
@@ -788,7 +797,7 @@ void mmf2_video_example_v1_snapshot_hr_init(void)
 	init_params.init_isp_items.init_wdr_mode = WDR_AUTO;
 	init_params.init_isp_items.init_wdr_level = 50;
 	init_params.init_isp_items.init_mipi_mode = 0;
-	init_params.voe_dbg_disable = 1;
+	init_params.voe_dbg_disable = !APP_VOE_LOG_EN;
 	video_v1_ctx = mm_module_open(&video_module);
 	if (video_v1_ctx) {
 		video_v1_params.direct_output = 1;

@@ -28,6 +28,14 @@
 #endif
 #define WOWLAN_CONNECTIVITY_CHECK     0
 #define WOWLAN_11V_EN     0
+#define WOWLAN_DYNAMIC_ARP_EN     1
+#if WOWLAN_DYNAMIC_ARP_EN
+#define ARP_SLEEPTIME_THRESHOLD 	(5 * 60)
+#define ARP_THRESHOLD_L 	(3)
+#define ARP_THRESHOLD_H 	(8)
+__attribute__((section(".retention.data"))) uint16_t retention_arp_interval __attribute__((aligned(32))) = 0;
+__attribute__((section(".retention.data"))) uint16_t retention_deauth_count __attribute__((aligned(32))) = 0;
+#endif
 //Clock, 1: 4MHz, 0: 100kHz
 #define CLOCK 0
 //SLEEP_DURATION, 120s
@@ -392,7 +400,54 @@ void tcp_app_task(void *param)
 #if WOWLAN_11V_EN
 	wifi_set_802_11v_bss_pkt_offload();
 #endif
+#if WOWLAN_DYNAMIC_ARP_EN
+	if (pm_reason & BIT(3)) {
+		if (wowlan_wake_reason) { //wlan wake
+			if (wowlan_wake_reason == RX_DEAUTH || wowlan_wake_reason == RX_DISASSOC) {
+				if (sleep_duration < ARP_SLEEPTIME_THRESHOLD) {
+					if (retention_deauth_count < ARP_THRESHOLD_L) {
+						retention_arp_interval = retention_arp_interval - 10;
+						dcache_clean_invalidate_by_addr((uint32_t *) &retention_arp_interval, sizeof(retention_arp_interval));
+						rtw_hal_set_arpreq_period(retention_arp_interval);
+						//RTW_API_INFO("[%s] (Dynamic) deauth_cnt: %d, arp_interval: %d\n\r",__FUNCTION__, retention_deauth_count,retention_arp_interval);
+					} else if (retention_deauth_count >= ARP_THRESHOLD_L && retention_deauth_count < (ARP_THRESHOLD_H)) {
+						rtw_hal_set_arpreq_period(retention_arp_interval);
+						//RTW_API_INFO("[%s] (2) (Keep) retention_deauth_count: %d, retention_arp_interval: %d\n\r",__FUNCTION__, retention_deauth_count,retention_arp_interval);
+					} else {
+						//RTW_API_INFO("[%s] (3) (Back to default) retention_deauth_count: %d, retention_arp_interval: %d\n\r",__FUNCTION__, retention_deauth_count,retention_arp_interval);
+						retention_arp_interval = 50;
+						dcache_clean_invalidate_by_addr((uint32_t *) &retention_arp_interval, sizeof(retention_arp_interval));
+						rtw_hal_set_arpreq_period(50);
+					}
 
+					//Avoid the retention_arp_interval is invalue
+					if (retention_arp_interval > 50 || retention_arp_interval < 20) {
+						retention_arp_interval = 50;
+						dcache_clean_invalidate_by_addr((uint32_t *) &retention_arp_interval, sizeof(retention_arp_interval));
+						//RTW_API_INFO("[%s] (3) retention_deauth_count: %d, retention_arp_interval: %d\n\r",__FUNCTION__, retention_deauth_count,retention_arp_interval);
+						rtw_hal_set_arpreq_period(retention_arp_interval);
+					}
+
+					retention_deauth_count++;
+				}
+				dcache_clean_invalidate_by_addr((uint32_t *) &retention_deauth_count, sizeof(retention_deauth_count));
+				RTW_API_INFO("[%s] deauth_cnt: %d, arp_interval: %d\n\r", __FUNCTION__, retention_deauth_count, retention_arp_interval);
+			}
+		}
+	}  else if (pm_reason & (BIT(9) | BIT(10) | BIT(11) | BIT(12))) { //GPIO wake
+		rtw_hal_set_arpreq_period(retention_arp_interval);
+
+	} else if (pm_reason & BIT(6)) { //Timer wake
+		rtw_hal_set_arpreq_period(retention_arp_interval);
+	} else {
+		//Cold boot.
+		retention_arp_interval = 50;
+		retention_deauth_count = 0;
+		dcache_clean_invalidate_by_addr((uint32_t *) &retention_arp_interval, sizeof(retention_arp_interval));
+		dcache_clean_invalidate_by_addr((uint32_t *) &retention_deauth_count, sizeof(retention_deauth_count));
+		RTW_API_INFO("[%s] Cold boot, deauth_cnt: %d, arp_interval: %d\n\r", __FUNCTION__, retention_deauth_count, retention_arp_interval);
+	}
+#endif
 	//dynamic dtim
 	uint8_t level = rtl8735b_get_dynamic_dtim_level();
 	uint8_t dtim_max =  10 - (10 % level);
@@ -1175,9 +1230,9 @@ void main(void)
 
 			rtw_hal_read_aoac_rpt_from_txfifo(NULL, 0, 0);
 
-			uint16_t dhcp_t1_time = rtw_hal_read_wowlan_t1_time();
-			extern uint8_t lwip_set_dhcp_resume_t1(uint16_t t1_time);
-			lwip_set_dhcp_resume_t1(dhcp_t1_time);
+			uint16_t dhcp_lease_used = rtw_hal_read_wowlan_lease_used();
+			extern uint8_t lwip_set_dhcp_resume_lease_used(uint16_t lease_used);
+			lwip_set_dhcp_resume_lease_used(dhcp_lease_used);
 		}
 	}
 

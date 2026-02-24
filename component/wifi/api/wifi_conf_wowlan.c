@@ -1153,7 +1153,7 @@ int wifi_set_dhcp_offload(void)
 	uint8_t *dhcp_payload = NULL;
 	int len = 0;
 	uint32_t  seconds_elapsed = xTaskGetTickCount();
-	uint32_t lease_time, t1_time, xid, xid_temp;
+	uint32_t lease_time, lease_used_time, xid, xid_temp;
 	/* dhcp msg */
 	struct dhcprenew_msg *dhcprenew_msg = NULL;
 	dhcprenew_msg = malloc(sizeof(struct dhcprenew_msg));
@@ -1330,12 +1330,12 @@ int wifi_set_dhcp_offload(void)
 	memcpy(eth_frame + sizeof(eth_header) + sizeof(ip_header) + 8, dhcp_payload, len);
 
 	lease_time = LwIP_GetLEASETIME(0) / 60;
-	t1_time = LwIP_GetRENEWTIME(0);
-	if (t1_time == 0) {
-		t1_time = 1;
+	lease_used_time = LwIP_GetLEASEUSED(0);
+	if (lease_used_time == 0) {
+		lease_used_time = 1;
 	}
 
-	rtw_set_dhcp_offload(eth_frame, frame_len, lease_time, t1_time);
+	rtw_set_dhcp_offload(eth_frame, frame_len, lease_time, lease_used_time);
 
 #if 0
 	printf("wifi_set_dhcp_offload\r\n");
