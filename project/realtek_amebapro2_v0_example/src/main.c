@@ -8,14 +8,27 @@
 #include <platform_opts_bt.h>
 #include "video_boot.h"
 #include "mmf2_mediatime_8735b.h"
+#include <stdio.h>
+#include "hal_pinmux.h"
+#include "video_example_media_framework.h"
+
+hal_status_t __real_hal_pinmux_register(uint32_t pin_name, uint32_t periphl_id);
+
+hal_status_t __wrap_hal_pinmux_register(uint32_t pin_name, uint32_t periphl_id)
+{
+    printf("PINMUX register pin=0x%02lx pid=0x%08lx\r\n",
+           (unsigned long)pin_name,
+           (unsigned long)periphl_id);
+    return __real_hal_pinmux_register(pin_name, periphl_id);
+}
 
 #if CONFIG_WLAN
 #include <wifi_fast_connect.h>
 extern void wlan_network(void);
 #endif
-
 extern void console_init(void);
 extern void mpu_rodata_protect_init(void);
+extern void video_example_media_framework(void);
 
 // tick count initial value used when start scheduler
 uint32_t initial_tick_count = 0;
@@ -168,7 +181,9 @@ void main(void)
 	voe_t2ff_prealloc();
 
 	setup();
-
+	
+	printf("VIDEO PIPELINE STARTING\n");
+	//mmf2_video_example_v1_init();
 	/* Execute application example */
 	app_example();
 

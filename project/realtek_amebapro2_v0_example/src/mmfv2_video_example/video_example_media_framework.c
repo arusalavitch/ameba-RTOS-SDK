@@ -42,16 +42,16 @@ static void wifi_common_init(void)
 static void sensor_board_init(void)
 {
 //init IR-Cut on RTK sensor board
-#if(CONFIG_RTK_EVB_IR_CTRL >= 1)
-	ir_cut_init(NULL);
-	ir_cut_enable(1);
-#endif
+//#if(CONFIG_RTK_EVB_IR_CTRL >= 1)
+//	ir_cut_init(NULL);
+//	ir_cut_enable(1);
+//#endif
 //init HW-Als & IR-LED on RTK light board
-#if(CONFIG_RTK_EVB_IR_CTRL == 2)
-	ir_ctrl_init(NULL);
-	ambient_light_sensor_init(NULL);
-	ambient_light_sensor_power(1);
-#endif
+//#if(CONFIG_RTK_EVB_IR_CTRL == 2)
+//	ir_ctrl_init(NULL);
+//	ambient_light_sensor_init(NULL);
+//	ambient_light_sensor_power(1);
+//#endif
 }
 
 //------------------------------------------------------------------------------
@@ -61,7 +61,7 @@ static void example_mmf2_video_surport(void)
 {
 
 	// CH1 Video -> H264/HEVC -> RTSP
-	mmf2_video_example_v1_init();
+	mmf2_video_example_v2_init();
 
 	// CH2 Video -> H264/HEVC -> RTSP
 	//mmf2_video_example_v2_init();
@@ -240,7 +240,7 @@ void video_example_main(void *param)
 	rtw_create_secure_context(2048);
 #endif
 	if (!voe_boot_fsc_status()) {
-		wifi_common_init();
+		//wifi_common_init();
 		sensor_board_init();
 	}
 
@@ -274,7 +274,6 @@ void video_example_main(void *param)
 
 void video_example_media_framework(void)
 {
-	/*user can start their own task here*/
 	if (xTaskCreate(video_example_main, ((const char *)"mmf2_video"), 4096, NULL, tskIDLE_PRIORITY + 1, NULL) != pdPASS) {
 		printf("\r\n video_example_main: Create Task Error\n");
 	}

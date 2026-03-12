@@ -8,9 +8,9 @@ set(CMAKE_ASM_COMPILER_WORKS 1)
 ###****************NEW*********************#####
 set(PICOLIBC OFF)
 
-set(CMAKE_C_COMPILER "arm-none-eabi-gcc" )
-set(CMAKE_CXX_COMPILER "arm-none-eabi-g++" )
-set(CMAKE_ASM_COMPILER "arm-none-eabi-gcc" )
+set(CMAKE_C_COMPILER "/home/bsc/ameba-rtos-pro2/tools/Pro2_PG_tool _v1.4.3/asdk-10.3.0-linux-newlib-build-3638-x86_64/asdk-10.3.0/linux/newlib/bin/arm-none-eabi-gcc")
+set(CMAKE_CXX_COMPILER "/home/bsc/ameba-rtos-pro2/tools/Pro2_PG_tool _v1.4.3/asdk-10.3.0-linux-newlib-build-3638-x86_64/asdk-10.3.0/linux/newlib/bin/arm-none-eabi-g++")
+set(CMAKE_ASM_COMPILER "/home/bsc/ameba-rtos-pro2/tools/Pro2_PG_tool _v1.4.3/asdk-10.3.0-linux-newlib-build-3638-x86_64/asdk-10.3.0/linux/newlib/bin/arm-none-eabi-gcc")
 set(CMAKE_OBJECOPY "arm-none-eabi-objcopy" )
 set(CMAKE_OBJEDUMP "arm-none-eabi-objdump" )
 set(CMAKE_STRIP "arm-none-eabi-strip" )

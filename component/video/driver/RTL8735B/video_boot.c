@@ -417,8 +417,8 @@ int video_boot_open(int ch_index, video_boot_params_t *v_stream)
 		v_adp->cmd[ch]->min_tr_size      = 4;
 		v_adp->cmd[ch]->tr_depth_intra   = 1;
 		v_adp->cmd[ch]->tr_depth_inter   = 2;
-		v_adp->cmd[ch]->level            = VCENC_H264_LEVEL_5_1;
-		v_adp->cmd[ch]->profile          = VCENC_H264_HIGH_PROFILE;	// default is HEVC HIGH profile
+		v_adp->cmd[ch]->level            = VCENC_H264_LEVEL_4_2;
+		v_adp->cmd[ch]->profile          = VCENC_H264_MAIN_PROFILE;	// default is HEVC HIGH profile
 		v_adp->cmd[ch]->outputRateNumer = v_stream->fps;
 		v_adp->cmd[ch]->inputRateNumer = isp_fps;
 		v_adp->cmd[ch]->intraPicRate = v_stream->gop;

@@ -18,7 +18,7 @@
 *****************************************************************************/
 
 #define V2_CHANNEL 1
-#define V2_BPS 2*1024*1024
+#define V2_BPS (2000 * 1024)
 #define V2_RCMODE 2 // 1: CBR, 2: VBR
 #define USE_H265 0
 #if USE_H265
@@ -61,13 +61,18 @@ void mmf2_video_example_v2_init(void)
 	atcmd_userctrl_init();
 
 	/*sensor capacity check & video parameter setting*/
-	video_v2_params.resolution = VIDEO_FHD;
-	video_v2_params.width = sensor_params[USE_SENSOR].sensor_width;
-	video_v2_params.height = sensor_params[USE_SENSOR].sensor_height;
-	video_v2_params.fps = sensor_params[USE_SENSOR].sensor_fps;
-	video_v2_params.gop = sensor_params[USE_SENSOR].sensor_fps;
+	video_v2_params.resolution = 0;
+	video_v2_params.width = 1920;
+	video_v2_params.height = 1080;
+	video_v2_params.fps = 30;
+	video_v2_params.gop = 30;
+	video_v2_params.use_roi = 0;
+	//video_v2_params.roi.xmin = 760;
+	//video_v2_params.roi.ymin = 340;
+	//video_v2_params.roi.xmax = 1160;
+	//video_v2_params.roi.ymax = 740;
 	/*rtsp parameter setting*/
-	rtsp2_v2_params.u.v.fps = sensor_params[USE_SENSOR].sensor_fps;
+	rtsp2_v2_params.u.v.fps = video_v2_params.fps;
 #if (USE_UPDATED_VIDEO_HEAP == 0)
 	int voe_heap_size = video_voe_presetting(0, 0, 0, 0, 0,
 						1, video_v2_params.width, video_v2_params.height, V2_BPS, 0,
@@ -80,7 +85,7 @@ void mmf2_video_example_v2_init(void)
 
 	video_v2_ctx = mm_module_open(&video_module);
 	if (video_v2_ctx) {
-		mm_module_ctrl(video_v2_ctx, CMD_VIDEO_SET_PARAMS, (int)&video_v2_params);
+		mm_module_ctrl(video_v2_ctx, CMD_VIDEO_SET_PARAMS, (uint32_t)&video_v2_params);
 		mm_module_ctrl(video_v2_ctx, MM_CMD_SET_QUEUE_LEN, video_v2_params.fps * 3);
 		mm_module_ctrl(video_v2_ctx, MM_CMD_INIT_QUEUE_ITEMS, MMQI_FLAG_DYNAMIC);
 	} else {
@@ -90,8 +95,9 @@ void mmf2_video_example_v2_init(void)
 
 	rtsp2_v2_ctx = mm_module_open(&rtsp2_module);
 	if (rtsp2_v2_ctx) {
-		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SELECT_STREAM, 0);
+		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SELECT_STREAM, V2_CHANNEL);
 		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SET_PARAMS, (int)&rtsp2_v2_params);
+		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SET_URL, (int)"live");
 		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SET_APPLY, 0);
 		mm_module_ctrl(rtsp2_v2_ctx, CMD_RTSP2_SET_STREAMMING, ON);
 	} else {

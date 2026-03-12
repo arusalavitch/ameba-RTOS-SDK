@@ -14,12 +14,12 @@ void wlan_network(void);
 #define SERIAL_DEBUG_RX 1
 
 /* WLAN and Netork */
-#define STA_MODE_SSID   "ap"    /* Set SSID here */
-#define AP_MODE_SSID    "wlan_ap_ssid"    /* Set SSID here */
+#define STA_MODE_SSID   "Connect2Smith"    /* Set SSID here */
+#define AP_MODE_SSID    "AMB82_CAMERA"    /* Set SSID here */
 #define AP_DEFAULT_CH   6
 #define WLAN0_NAME      "wlan0"
 #define WLAN1_NAME      "wlan1"
-#define WPA_PASSPHRASE  "1234567890" /* Max 32 cahracters */
+#define WPA_PASSPHRASE  "sophiasmith" /* Max 32 cahracters */
 #define WEP40_KEY       {0x12, 0x34, 0x56, 0x78, 0x90}
 
 #define ATVER_1 1 // For First AT command

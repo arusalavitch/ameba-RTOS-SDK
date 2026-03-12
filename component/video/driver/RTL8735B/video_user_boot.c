@@ -27,7 +27,7 @@
 //#define USE_FCS_LOOKUPTABLE_SAMPLE
 video_boot_stream_t video_boot_stream = {
 	//video channel 0
-	.video_enable[STREAM_V1] = 1,
+	.video_enable[STREAM_V1] = 0,
 	.video_snapshot[STREAM_V1] = 0,
 	.video_drop_frame[STREAM_V1] = 0,
 	.video_params[STREAM_V1] = {
@@ -48,7 +48,7 @@ video_boot_stream_t video_boot_stream = {
 				.out_rsvd_size = 0,
 				.direct_output = 0,
 				.use_static_addr = 0,
-				.fcs = 1 //Enable the fcs for channel 0
+				.fcs = 0 //Enable the fcs for channel 0
 	},
 	.bps_stbl_ctrl_params[STREAM_V1] = {
 		.sampling_time = 2000,
@@ -57,7 +57,7 @@ video_boot_stream_t video_boot_stream = {
 		.target_bitrate = 2 * 1024 * 1024
 	},
 	//video channel 1
-	.video_enable[STREAM_V2] = 1,
+	.video_enable[STREAM_V2] = 0,
 	.video_snapshot[STREAM_V2] = 0,
 	.video_drop_frame[STREAM_V2] = 0,
 	.video_params[STREAM_V2] = {
@@ -111,7 +111,7 @@ video_boot_stream_t video_boot_stream = {
 		.fcs = 0,
 	},
 	//video channel 4
-	.video_enable[STREAM_V4] = 1,
+	.video_enable[STREAM_V4] = 0,
 	.video_drop_frame[STREAM_V4] = 0, //support after VOE1.5.3.0
 	.video_params[STREAM_V4] = {
 		.stream_id = STREAM_ID_V4,
@@ -319,7 +319,7 @@ int boot_read_flash_data(unsigned int address, unsigned char *buf, int length)
 
 int user_disable_fcs(void)
 {
-	return 0;//1:disable fcs, 0:Don't care
+	return 1;//1:disable fcs, 0:Don't care
 }
 
 void user_boot_config_init(void *parm)
@@ -366,7 +366,7 @@ void user_boot_config_init(void *parm)
 				if (video_boot_stream.isp_info.sensor_width == fcs_retention_data->isp_info.sensor_width &&
 					video_boot_stream.isp_info.sensor_height == fcs_retention_data->isp_info.sensor_height) {
 					uint32_t fcs_start_time = video_boot_stream.fcs_start_time;
-					memcpy(&video_boot_stream, fcs_retention_data, sizeof(video_boot_stream_t));
+					//memcpy(&video_boot_stream, fcs_retention_data, sizeof(video_boot_stream_t));
 					video_boot_stream.fcs_start_time = fcs_start_time;
 				}
 				//dbg_printf("load fcs retention success\r\n");
@@ -391,7 +391,7 @@ void user_boot_config_init(void *parm)
 				if ((video_boot_stream.isp_info.sensor_width == fcs_data->isp_info.sensor_width) &&
 					(video_boot_stream.isp_info.sensor_height == fcs_data->isp_info.sensor_height)) {
 					uint32_t fcs_start_time = video_boot_stream.fcs_start_time;
-					memcpy(&video_boot_stream, fcs_data, sizeof(video_boot_stream_t));
+					//memcpy(&video_boot_stream, fcs_data, sizeof(video_boot_stream_t));
 					video_boot_stream.fcs_start_time = fcs_start_time;
 					//dbg_printf("Update parameter\r\n");
 				} else {

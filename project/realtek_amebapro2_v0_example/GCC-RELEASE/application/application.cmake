@@ -52,6 +52,7 @@ include(./libfaultlog.cmake OPTIONAL)
 include(./libeap.cmake OPTIONAL)
 include(./libiperf3.cmake OPTIONAL)
 include(./libwebsocket_viewer.cmake OPTIONAL)
+include (${prj_root}/src/mmfv2_video_example/video_example_media_framework.cmake)
 
 if(BUILD_LIB)
 	message(STATUS "build libraries")

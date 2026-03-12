@@ -21,6 +21,7 @@
 #include "error.h"
 #include "hal.h"
 #include "hal_video.h"
+#include "hal_i2c.h"
 #include "video_api.h"
 #include "boot_retention.h"
 #include "platform_opts.h"
@@ -1495,10 +1496,15 @@ void video_buf_release(void)
 void video_init_peri(void)
 {
 	int peri_update_with_fcs = 0;
-
+	printf("VIDEO INIT START\n");
 
 	volatile hal_i2c_adapter_t  i2c_master_video;
 
+	static int already_init = 0;
+	if (already_init){
+		printf("video already initialized, skipping\n");
+		return;
+	}
 
 	g_video_peri_info.scl_pin = PIN_D12;
 	g_video_peri_info.sda_pin = PIN_D10;
@@ -1514,9 +1520,10 @@ void video_init_peri(void)
 	pfcs_peri_info.fcs_peri_valid = 1;
 	hal_video_get_fcs_peri_info(&pfcs_peri_info);
 	fcs_version = pfcs_peri_info.fcs_data_id;
-
+	
+	printf("before hal_video_check_fcs_OK\n");
 	if (!hal_video_check_fcs_OK()) {
-
+		printf("inside hal_video_check_fcs_OK block\n");
 		if (peri_update_with_fcs) {
 			hal_pinmux_unregister(g_video_peri_info.pwr_ctrl_pin, PID_GPIO); //sensor clock
 			hal_pinmux_unregister(g_video_peri_info.rst_pin, PID_GPIO); //reset pin
@@ -1539,15 +1546,15 @@ void video_init_peri(void)
 		}
 
 
-		if (IS_CUT_TEST(hal_sys_get_rom_ver())) {
-			g_video_peri_info.pwr_ctrl_pin = PIN_A5;
-			g_video_peri_info.scl_pin	= PIN_D14;
-			g_video_peri_info.sda_pin	= PIN_D12;
-			g_video_peri_info.rst_pin	= PIN_D13;
-			g_video_peri_info.pwdn_pin = PIN_D11;
-			g_video_peri_info.snr_clk_pin = PIN_D10;
-			g_video_peri_info.i2c_id = 3;
-		} else {
+		//if (IS_CUT_TEST(hal_sys_get_rom_ver())) {
+		//	g_video_peri_info.pwr_ctrl_pin = PIN_A5;
+		//	g_video_peri_info.scl_pin	= PIN_D14;
+		//	g_video_peri_info.sda_pin	= PIN_D12;
+		//	g_video_peri_info.rst_pin	= PIN_D13;
+		//	g_video_peri_info.pwdn_pin = PIN_D11;
+		//	g_video_peri_info.snr_clk_pin = PIN_D13;
+		//	g_video_peri_info.i2c_id = 3;
+		//} else {
 			g_video_peri_info.pwr_ctrl_pin = PIN_A5;
 			g_video_peri_info.scl_pin	= PIN_D12;
 			g_video_peri_info.sda_pin	= PIN_D10;
@@ -1555,7 +1562,7 @@ void video_init_peri(void)
 			g_video_peri_info.pwdn_pin = PIN_D11;
 			g_video_peri_info.snr_clk_pin = PIN_D13;
 			g_video_peri_info.i2c_id = 3;
-		}
+		//}
 
 		// Enable Sensor PWR
 		if(video_pre_init_param.sens_pwr_dis) {
@@ -1568,9 +1575,33 @@ void video_init_peri(void)
 		}
 		// Enable GPIO
 		hal_sys_peripheral_en(GPIO_SYS, ENABLE);
-		hal_pinmux_register(g_video_peri_info.rst_pin, PID_GPIO); //reset pin
-		hal_pinmux_register(g_video_peri_info.pwdn_pin, PID_GPIO); //power down pin
+		//hal_pinmux_register(g_video_peri_info.rst_pin, PID_GPIO); //reset pin
+		//hal_pinmux_register(g_video_peri_info.pwdn_pin, PID_GPIO); //power down pin
 		hal_pinmux_register(g_video_peri_info.snr_clk_pin, PID_SENSOR); //sensor clock
+		
+		hal_gpio_adapter_t rst_gpio;
+		hal_gpio_adapter_t pwdn_gpio;
+
+		/* PWDN first */
+		hal_gpio_init(&pwdn_gpio, g_video_peri_info.pwdn_pin);
+		hal_gpio_set_dir(&pwdn_gpio, GPIO_OUT);
+		hal_gpio_write(&pwdn_gpio, 1);
+		vTaskDelay(10);
+
+		/* RESET low */
+		hal_gpio_init(&rst_gpio, g_video_peri_info.rst_pin);
+		hal_gpio_set_dir(&rst_gpio, GPIO_OUT);
+		hal_gpio_write(&rst_gpio, 0);
+		vTaskDelay(20);
+
+		/* Release PWDN */
+		hal_gpio_write(&pwdn_gpio, 0);
+		vTaskDelay(20);
+
+		/* Release RESET */
+		hal_gpio_write(&rst_gpio, 1);
+		vTaskDelay(30);
+		
 		video_dprintf(VIDEO_LOG_INF, "register pin rst 0x%02x pwdn 0x%02x snr_clk 0x%02x \n", g_video_peri_info.rst_pin, g_video_peri_info.pwdn_pin,
 					  g_video_peri_info.snr_clk_pin);
 
@@ -1579,13 +1610,33 @@ void video_init_peri(void)
 		i2c_master_video.pltf_dat.sda_pin = g_video_peri_info.sda_pin;
 		i2c_master_video.init_dat.index = g_video_peri_info.i2c_id;//1;
 		hal_i2c_pin_register_simple(&i2c_master_video);
+		//printf("\n=== RAW I2C PROBE START ===\n");
+
+		//struct rts_isp_i2c_reg reg = {0};
+		//int ret = 0;
+		//uint16_t data0a = 0;
+		//uint16_t data0b = 0;
+		
+		//reg.addr = 0x0A;
+		//reg.data =0;
+		//ret = hal_video_i2c_read(&reg);
+		//data0a = reg.data;
+		//printf("F37 reg 0x0A ret = %d data = 0x%02x\n", ret, data0a);
+
+		//reg.addr = 0x0B;
+		//reg.data=0;
+		//ret = hal_video_i2c_read(&reg);
+		//data0b = reg.data;
+		//printf("F37 reg 0x0B ret = %d data = 0x%02x\n", ret, data0b);
+		//printf("\n\n===PROBE END  ===\n");
+
 		video_dprintf(VIDEO_LOG_INF, "i2c init scl 0x%02x sda 0x%02x id %d \n", g_video_peri_info.scl_pin, g_video_peri_info.sda_pin, g_video_peri_info.i2c_id);
 
 	} else {
 		sensor_en_pin_delay_init = 0x1;  // set flag for reset during de-init
 		hal_video_reset_fcs_OK();
 	}
-
+	already_init = 1;
 }
 
 void video_deinit_peri(void)
@@ -1886,8 +1937,7 @@ void video_pre_init_procedure(int ch, video_pre_init_params_t *parm)
 		hal_video_enable_load_cali_iq(ch, calib_iq_en);
 		hal_video_load_cali_iq((voe_cpy_t)hal_voe_cpy, (int *)(piq_cali_data), __voe_code_start__, sizeof(struct isp_iq_cali));
 		video_dprintf(VIDEO_LOG_MSG, "[%s] apply calibration data.\r\n", __FUNCTION__);
-	}
-
+}
 	if (parm->fast_mask_en) {
 		video_set_private_mask(ch, &parm->fast_mask);
 		hal_video_fast_enable_mask(ch);
@@ -1960,7 +2010,6 @@ void video_pre_init_procedure(int ch, video_pre_init_params_t *parm)
 		video_dprintf(VIDEO_LOG_INF, "hal_video_isp_init_raw(%d, 1)\r\n", ch);
 		hal_video_isp_init_raw(ch, 1);
 	}
-
 	if (parm->isp_raw_mode_tnr_dis) {
 		video_dprintf(VIDEO_LOG_INF, "hal_video_isp_tnr_dis(%d, 1)\r\n", ch);
 		hal_video_isp_raw_mode_tnr_dis(ch, 1);
@@ -1983,7 +2032,6 @@ void video_pre_init_procedure(int ch, video_pre_init_params_t *parm)
 	}
 
 	hal_video_isp_init_dyn_iq_mode(ch, parm->dyn_iq_mode);
-
 #endif
 }
 
@@ -2303,7 +2351,7 @@ int video_open(video_params_t *v_stream, output_callback_t output_cb, void *ctx)
 		goto EXIT;
 	}
 
-
+	g_video_peri_info.pwdn_pin = PIN_D11;
 	hal_video_isp_set_sensor_gpio(ch, g_video_peri_info.rst_pin, g_video_peri_info.pwdn_pin, g_video_peri_info.pwr_ctrl_pin);
 	hal_video_isp_set_i2c_id(ch, g_video_peri_info.i2c_id);
 
@@ -2750,6 +2798,20 @@ hal_video_adapter_t *video_init(int iq_start_addr, int sensor_start_addr)
 			voe_info.sensor_addr = 0;
 			return NULL;
 		}
+
+		printf("\n=== RAW I2C PROBE START ===\n");
+
+		struct rts_isp_i2c_reg reg = {0};
+		int ret = 0;
+		
+		for (int r = 0; r < 0x20; r++){
+			reg.addr = r;
+			reg.data = 0;
+			ret = hal_video_i2c_read(&reg);
+			printf("reg 0x%02x ret = %d data = 0x%02x\n", r, ret, reg. data);
+		}
+
+		printf("=== RAW I2C PROBE END ===\n\n");
 
 		video_dprintf(VIDEO_LOG_INF, "!hal_voe_ready\r\n");
 

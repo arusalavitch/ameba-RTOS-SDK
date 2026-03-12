@@ -1,7 +1,9 @@
-*.dep
-*.ewt
-*.d
+build/
 *.o
-*.su
-libsrc
-*@tmp
+*.a
+*.bin
+*.map
+*.log
+*.d
+*.elf
+*.hex

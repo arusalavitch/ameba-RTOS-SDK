@@ -17,6 +17,7 @@
 #include "wifi_conf.h"
 #include "wlan_intf.h"
 #include "wifi_constants.h"
+#include "wifi_structures.h"
 #endif
 #if CONFIG_LWIP_LAYER
 #include "lwip_netconf.h"
@@ -55,10 +56,32 @@ void init_thread(void *param)
 #endif
 
 #if CONFIG_WLAN
+	if (wifi_on(RTW_MODE_AP) < 0) {
+		printf("\n\r[AP MODE] wifi_on failed\n");
+		vTaskDelete(NULL);
+		return;
+	}
+
+	rtw_softap_info_t softAP_config = {0};
+
+	strncpy((char *)softAP_config.ssid.val, AP_MODE_SSID, sizeof(softAP_config.ssid.val) - 1);
+	softAP_config.ssid.len = strlen(AP_MODE_SSID);
+	softAP_config.password = (unsigned char *)WPA_PASSPHRASE;
+	softAP_config.password_len = strlen(WPA_PASSPHRASE);
+	softAP_config.channel = AP_DEFAULT_CH;
+	softAP_config.security_type = RTW_SECURITY_WPA2_AES_PSK;
+	softAP_config.hidden_ssid = 0;
+
+//	if (wifi_start_ap(&softAP_config) < 0) {
+//		printf("\n\r[AP MODE] wifi_start_ap failed\n");
+//		vTaskDelete(NULL);
+//		return;
+//	}
+
+//	printf("\n\r[AP MODE] Started SSID: %s\n", AP_MODE_SSID);
 	wifi_on(RTW_MODE_STA);
 	printf("\n\r%s(%d), Available heap 0x%x\n", __FUNCTION__, __LINE__, xPortGetFreeHeapSize());
 #endif
-
 	wlan_init_end_time();
 	/* Kill init thread after all init tasks done */
 	vTaskDelete(NULL);

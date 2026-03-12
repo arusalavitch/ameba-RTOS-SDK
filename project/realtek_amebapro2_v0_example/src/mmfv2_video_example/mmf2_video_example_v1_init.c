@@ -90,6 +90,7 @@ void mmf2_video_example_v1_init(void)
 	if (rtsp2_v1_ctx) {
 		mm_module_ctrl(rtsp2_v1_ctx, CMD_RTSP2_SELECT_STREAM, 0);
 		mm_module_ctrl(rtsp2_v1_ctx, CMD_RTSP2_SET_PARAMS, (int)&rtsp2_v1_params);
+		mm_module_ctrl(rtsp2_v1_ctx, CMD_RTSP2_SET_URL, (int)"live");
 		mm_module_ctrl(rtsp2_v1_ctx, CMD_RTSP2_SET_APPLY, 0);
 		mm_module_ctrl(rtsp2_v1_ctx, CMD_RTSP2_SET_STREAMMING, ON);
 	} else {

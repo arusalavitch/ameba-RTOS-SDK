@@ -7,5 +7,6 @@
 
 void app_example(void)
 {
+	printf("VIDEO PIPELINE STARTING\n");
 	video_example_media_framework();
 }
