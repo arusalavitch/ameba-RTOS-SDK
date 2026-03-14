@@ -166,20 +166,20 @@ static const struct sensor_params_t sensor_params[] = {
 
 static const unsigned char sen_id[SENSOR_MAX] = {
 	SENSOR_DUMMY,
-	SENSOR_F37,
+	SENSOR_GC2053,
 	SENSOR_GC4653,
 	SENSOR_GC4023,
-	SENSOR_SC2336
+	SENSOR_F37
 };
 
 #define USE_SENSOR      	SENSOR_F37
 
 static const      char manual_iq[SENSOR_MAX][64] = {
 	"iq",
-	"iq_f37",
+	"iq_gc2053",
 	"iq_gc4653",
 	"iq_gc4023",
-	"iq_sc2336",
+	"iq_f37",
 };
 
 #define MANUAL_SENSOR_IQ	0xFF
