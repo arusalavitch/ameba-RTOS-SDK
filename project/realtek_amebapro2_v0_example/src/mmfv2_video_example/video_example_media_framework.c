@@ -61,7 +61,7 @@ static void example_mmf2_video_surport(void)
 {
 
 	// CH1 Video -> H264/HEVC -> RTSP
-	mmf2_video_example_v2_init();
+	mmf2_video_example_v1_init();
 
 	// CH2 Video -> H264/HEVC -> RTSP
 	//mmf2_video_example_v2_init();

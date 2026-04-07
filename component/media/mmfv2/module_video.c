@@ -580,6 +580,7 @@ int video_control(void *p, int cmd, int arg)
 	}
 	break;
 	case CMD_VIDEO_APPLY: {
+		printf("video_apply: ch=%d iq=0x%x sensor=0x%x\n", ch, ctx->iq_addr, ctx->sensor_addr);
 		int ch = arg;
 		ctx->params.stream_id = ch;
 		//video init before first vido open, take 78ms.
@@ -824,14 +825,17 @@ static int video_detect_sensor_id(void)
 	return id_value;
 }
 
-void *video_create(void *parent)
-{
+void *video_create(void *parent){
+
 	video_ctx_t *ctx = malloc(sizeof(video_ctx_t));
+	printf("video_create: sensor_id_value=%d USE_SENSOR=%d iq=0x%x sensor=0x%x\n", 
+	sensor_id_value, USE_SENSOR, ctx->iq_addr, ctx->sensor_addr);
 	int ret = 0;
 	if (!ctx) {
 		return NULL;
 	}
 	memset(ctx, 0, sizeof(video_ctx_t));
+	printf("video_create: sensor_id_value=%d USE_SENSOR=%d\n", sensor_id_value, USE_SENSOR);
 
 	ctx->parent = parent;
 	ctx->dbg_ts_info = NULL;
@@ -840,6 +844,7 @@ void *video_create(void *parent)
 	if (voe_boot_fsc_status()) {
 		sensor_id_value = voe_boot_fsc_id();
 		voe_get_sensor_info(sensor_id_value, &ctx->iq_addr, &ctx->sensor_addr);
+		printf("video_create:iq_addr=0x%08x sensor_addr=0x%08x\n", (unsigned int)ctx->iq_addr, (unsigned int)ctx->sensor_addr);
 	} else {
 #if MULTI_SENSOR
 		int sensor_id = isp_get_id();

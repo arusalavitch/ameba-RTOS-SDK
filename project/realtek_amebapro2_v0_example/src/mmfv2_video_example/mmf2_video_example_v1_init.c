@@ -3,6 +3,10 @@
 * Copyright(c) 2007 - 2021 Realtek Corporation. All rights reserved.
 *
 ******************************************************************************/
+#include <string.h>
+#include "lwip/netif.h"
+#include "wifi_conf.h"
+#include "video_api.h"
 #include "mmf2_link.h"
 #include "mmf2_siso.h"
 #include "module_video.h"
@@ -31,6 +35,8 @@
 #define VIDEO_CODEC AV_CODEC_ID_H264
 #endif
 
+extern struct netif xnetif[];
+
 static void atcmd_userctrl_init(void);
 static mm_context_t *video_v1_ctx			= NULL;
 static mm_context_t *rtsp2_v1_ctx			= NULL;
@@ -55,9 +61,63 @@ static rtsp2_params_t rtsp2_v1_params = {
 	}
 };
 
+static void sensor_hw_init(void){
+	printf("Initializing sensor hardware...\n");
+
+
+
+
+}
+
+static void start_ap_mode(void){
+	rtw_softap_info_t ap;
+	memset(&ap, 0, sizeof(ap));
+
+	static char ssid[] = "AmebaCam";
+	static char password[] = "12345678";
+
+	memcpy(ap.ssid.val, ssid, strlen(ssid));
+	ap.ssid.len = strlen(ssid);
+
+	ap.password = (unsigned *)password;
+	ap.password_len = strlen(password);
+
+	ap.security_type = RTW_SECURITY_WPA2_AES_PSK;
+	ap.channel = 6;
+
+	printf("Starting WiFi...\n");
+
+	wifi_off();
+	vTaskDelay(1000);
+
+	if(wifi_on(RTW_MODE_AP)<0){
+		printf("wifi_on failed!\n");
+		return;
+	}
+
+	if (wifi_start_ap(&ap) <0){
+		printf("wifi_start_ap failed\n");
+		return;
+	}
+	printf("WiFi started!\n");
+}
+
 void mmf2_video_example_v1_init(void)
 {
+
 	atcmd_userctrl_init();
+
+        start_ap_mode();
+        printf("Waiting for IP...\n");
+
+	while (netif_ip4_addr(&xnetif[0])->addr ==0){
+		vTaskDelay(3000);
+	}
+
+	printf("IP Address: %s\n", ip4addr_ntoa(netif_ip4_addr(&xnetif[0])));
+		
+	sensor_hw_init();
+	vTaskDelay(1000);
 
 	/*sensor capacity check & video parameter setting*/
 	video_v1_params.resolution = VIDEO_FHD;
@@ -76,8 +136,21 @@ void mmf2_video_example_v1_init(void)
 	int voe_heap_size = video_voe_presetting_by_params(&video_v1_params, 0, NULL, 0, NULL, 0, NULL);
 #endif
 	printf("\r\n voe heap size = %d\r\n", voe_heap_size);
+	printf("Applying VOE preset (Arduino-equivalent init)...\n");
+	video_voe_presetting(
+		1, 1920, 1080, 2*1024*1024, 0,  //V1 (enabled)
+		0, 0, 0, 0, 0,			//V2
+		0, 0, 0, 0, 0,			//V3
+		0, 0, 0				//V4
+	);
+
 	video_v1_ctx = mm_module_open(&video_module);
 	if (video_v1_ctx) {
+		video_pre_init_params_t init_params;
+        	memset(&init_params, 0, sizeof(init_params));
+      		mm_module_ctrl(video_v1_ctx, CMD_VIDEO_PRE_INIT_PARM, (int)&init_params);
+	        mm_module_ctrl(video_v1_ctx,CMD_VIDEO_SET_SENSOR_ID, 4);
+
 		mm_module_ctrl(video_v1_ctx, CMD_VIDEO_SET_PARAMS, (int)&video_v1_params);
 		mm_module_ctrl(video_v1_ctx, MM_CMD_SET_QUEUE_LEN, video_v1_params.fps * 3);
 		mm_module_ctrl(video_v1_ctx, MM_CMD_INIT_QUEUE_ITEMS, MMQI_FLAG_DYNAMIC);
