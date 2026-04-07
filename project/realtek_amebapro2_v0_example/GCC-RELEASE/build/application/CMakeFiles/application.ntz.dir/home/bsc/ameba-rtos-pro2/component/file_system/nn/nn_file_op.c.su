@@ -1,0 +1,8 @@
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:50:13:nn_encrypted	40	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:209:13:nn_aes_deinit	8	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:38:5:nn_aes_key_injection	8	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:273:6:nn_f_close	8	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:320:5:nn_f_seek	8	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:337:5:nn_f_tell	8	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:293:5:nn_f_read	24	static
+/home/bsc/ameba-rtos-pro2/component/file_system/nn/nn_file_op.c:228:7:nn_f_open	216	static

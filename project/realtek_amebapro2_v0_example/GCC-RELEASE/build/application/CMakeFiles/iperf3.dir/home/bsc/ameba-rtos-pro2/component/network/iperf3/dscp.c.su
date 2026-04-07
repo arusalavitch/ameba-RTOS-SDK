@@ -1,0 +1,2 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/dscp.c:123:1:parse_qos	24	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/dscp.c:146:1:iptos2str	8	static

@@ -1,0 +1,2 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_window_size.c:78:1:set_tcp_windowsize	24	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_window_size.c:109:1:get_tcp_windowsize	24	static

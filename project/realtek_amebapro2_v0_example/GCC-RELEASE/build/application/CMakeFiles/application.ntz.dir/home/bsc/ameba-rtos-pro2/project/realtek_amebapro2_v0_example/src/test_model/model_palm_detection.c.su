@@ -1,0 +1,6 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:33:6:palm_detection_set_network_init_info	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:196:7:palm_detection_get_network_filename	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:40:5:palm_detection_preprocess	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:181:6:palm_detection_set_confidence_thresh	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:187:6:palm_detection_set_nms_thresh	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_palm_detection.c:95:5:palm_detection_postprocess	216	static

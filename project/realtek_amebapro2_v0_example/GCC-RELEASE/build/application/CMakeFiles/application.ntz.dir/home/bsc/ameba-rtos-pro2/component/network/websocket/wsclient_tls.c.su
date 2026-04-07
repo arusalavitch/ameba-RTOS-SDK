@@ -1,0 +1,7 @@
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:24:14:my_calloc	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:57:6:wss_tls_set_wowlan_ciphersuites	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:64:7:wss_tls_connect	40	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:178:5:wss_tls_handshake	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:208:6:wss_tls_close	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:242:5:wss_tls_write	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_tls.c:261:5:wss_tls_read	8	static

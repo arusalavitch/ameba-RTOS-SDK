@@ -1,0 +1,9 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:56:1:has_tcpinfo	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:68:1:has_tcpinfo_retransmits	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:90:1:save_tcpinfo	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:114:1:get_total_retransmits	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:134:1:get_snd_cwnd	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:154:1:get_rtt	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:174:1:get_rttvar	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:194:1:get_pmtu	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/tcp_info.c:207:1:build_tcpinfo_message	0	static

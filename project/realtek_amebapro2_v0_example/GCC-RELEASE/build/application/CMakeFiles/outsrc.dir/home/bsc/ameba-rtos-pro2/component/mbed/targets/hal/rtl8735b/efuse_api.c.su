@@ -1,0 +1,8 @@
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:38:5:efuse_otp_read	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:46:5:efuse_otp_write	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:55:5:efuse_s_jtag_key_write	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:60:5:efuse_ns_jtag_key_write	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:65:5:efuse_crypto_key_get	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:70:5:efuse_crypto_key_write	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:75:5:efuse_ecdsa_key_get	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/efuse_api.c:80:5:efuse_ecdsa_key_write	8	static

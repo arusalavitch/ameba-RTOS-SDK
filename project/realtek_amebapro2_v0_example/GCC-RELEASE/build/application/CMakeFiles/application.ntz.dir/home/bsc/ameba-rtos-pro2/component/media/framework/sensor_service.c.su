@@ -1,0 +1,7 @@
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:39:5:day_night_mode_switch	16	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:77:6:ss_cmd	8	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:113:6:autopwm_get_param	16	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:279:6:als_set_param	56	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:297:6:als_get_param	24	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:317:6:sensor_thread	152	static
+/home/bsc/ameba-rtos-pro2/component/media/framework/sensor_service.c:398:6:init_sensor_service	16	static

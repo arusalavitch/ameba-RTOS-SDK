@@ -1,0 +1,5 @@
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.c:18:14:rtw_indicate_event_handle	32	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.c:38:6:wifi_indication	16	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.c:64:6:wifi_reg_event_handler	16	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.c:83:6:wifi_unreg_event_handler	8	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.c:97:6:init_event_callback_list	8	static

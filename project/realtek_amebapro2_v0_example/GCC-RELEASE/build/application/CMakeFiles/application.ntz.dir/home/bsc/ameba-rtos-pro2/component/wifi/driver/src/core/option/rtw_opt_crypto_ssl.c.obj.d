@@ -1,0 +1,36 @@
+application/CMakeFiles/application.ntz.dir/home/bsc/ameba-rtos-pro2/component/wifi/driver/src/core/option/rtw_opt_crypto_ssl.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/src/core/option/rtw_opt_crypto_ssl.c \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/src/core/option/rtw_opt_crypto_ssl.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/mbedtls_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/check_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ecp.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/bignum.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha256.h \
+ /home/bsc/ameba-rtos-pro2/component/os/os_dep/include/osdep_service.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf_ntz.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/verify_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/sw_feature_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/basic_types.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_service.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/dlist.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/FreeRTOS.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/inc/FreeRTOSConfig.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/projdefs.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/portable.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/deprecated_definitions.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/os/freertos/freertos_v202012.00/Source/portable/GCC/ARM_CM33/non_secure/portmacro.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/mpu_wrappers.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/task.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/list.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/event_groups.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/timers.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/task.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/semphr.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/queue.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/queue.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/timers.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib_rtl8735b.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/platform.h

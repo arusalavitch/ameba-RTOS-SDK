@@ -1,0 +1,6 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:27:13:hand_landmark_input_setup	12	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:202:6:hand_landmark_set_confidence_thresh	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:210:7:hand_landmark_get_network_filename	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:136:5:hand_landmark_postprocess	40	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:87:5:hand_landmark_preprocess	48	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_hand_landmark.c:206:6:hand_landmark_set_nms_thresh	0	static

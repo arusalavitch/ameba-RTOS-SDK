@@ -1,0 +1,19 @@
+application/CMakeFiles/application.ntz.dir/home/bsc/ameba-rtos-pro2/component/file_system/vfs/vfs.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/file_system/vfs/vfs.c \
+ /home/bsc/ameba-rtos-pro2/component/os/os_dep/include/osdep_service.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf_ntz.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/verify_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/sw_feature_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/basic_types.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_service.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/dlist.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/queue.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/timers.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib_rtl8735b.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_posix/lib/include/FreeRTOS_POSIX/time.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_posix/lib/FreeRTOS-Plus-POSIX/include/FreeRTOS_POSIX.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_posix/lib/include/FreeRTOS_POSIX/time_gcc.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_posix/lib/include/FreeRTOS_POSIX/posix_signal.h \
+ /home/bsc/ameba-rtos-pro2/component/file_system/vfs/vfs.h

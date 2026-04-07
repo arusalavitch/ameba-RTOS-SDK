@@ -1,0 +1,4 @@
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_web_viewer.c:24:5:webview_control	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_web_viewer.c:41:7:webview_destroy	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_web_viewer.c:50:7:webview_create	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_web_viewer.c:13:5:webview_handle	8	static

@@ -1,0 +1,31 @@
+application/CMakeFiles/outsrc.dir/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/ssl_srv.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/ssl_srv.c \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/common.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/mbedtls_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/check_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/platform.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ssl.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/bignum.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ecp.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ssl_ciphersuites.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/pk.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/md.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/platform_util.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/rsa.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ecdsa.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/cipher.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/x509_crt.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/x509.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/asn1.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/x509_crl.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ecdh.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ssl_internal.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/md5.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha1.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha256.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha512.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/debug.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/error.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/constant_time_internal.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/constant_time.h

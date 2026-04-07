@@ -1,0 +1,4 @@
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_mp4.c:39:5:mp4_handle	16	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_mp4.c:52:5:mp4_control	16	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_mp4.c:218:7:mp4_destroy	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_mp4.c:241:7:mp4_create	24	static

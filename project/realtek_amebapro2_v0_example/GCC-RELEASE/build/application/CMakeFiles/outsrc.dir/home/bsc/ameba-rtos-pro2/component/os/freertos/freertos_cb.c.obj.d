@@ -1,0 +1,24 @@
+application/CMakeFiles/outsrc.dir/home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_cb.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_cb.c \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/FreeRTOS.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/inc/FreeRTOSConfig.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/projdefs.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/portable.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/deprecated_definitions.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/os/freertos/freertos_v202012.00/Source/portable/GCC/ARM_CM33/non_secure/portmacro.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/mpu_wrappers.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/task.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/list.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/diag.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf_ntz.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/verify_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/sw_feature_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/basic_types.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/log_buf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/rt_printf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/cmsis-core/include/cmsis_compiler.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/cmsis-core/include/cmsis_gcc.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/printf_entry.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/stdio_port/stdio_port.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/utilities/include/utility.h

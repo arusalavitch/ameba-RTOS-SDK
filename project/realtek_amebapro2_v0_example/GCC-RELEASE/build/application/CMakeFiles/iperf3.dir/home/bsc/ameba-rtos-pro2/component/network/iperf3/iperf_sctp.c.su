@@ -1,0 +1,7 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:50:1:iperf_sctp_recv	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:78:1:iperf_sctp_send	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:107:1:iperf_sctp_accept	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:151:1:iperf_sctp_listen	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:238:1:iperf_sctp_connect	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:398:1:iperf_sctp_init	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_sctp.c:417:1:iperf_sctp_bindx	0	static

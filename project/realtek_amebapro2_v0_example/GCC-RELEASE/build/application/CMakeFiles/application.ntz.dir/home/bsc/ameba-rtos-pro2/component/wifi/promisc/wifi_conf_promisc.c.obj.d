@@ -1,0 +1,31 @@
+application/CMakeFiles/application.ntz.dir/home/bsc/ameba-rtos-pro2/component/wifi/promisc/wifi_conf_promisc.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/wifi/promisc/wifi_conf_promisc.c \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/inc/main.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/autoconf.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/inc/platform_opts.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/autoconf_debug.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/autoconf_8735b.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/autoconf_eap.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/platform_stdlib_rtl8735b.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/basic_types.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/wifi_constants.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/wifi_structures.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/include/wifi_constants.h \
+ /home/bsc/ameba-rtos-pro2/component/stdlib/dlist.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/src/osdep/wlan_intf.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/src/osdep/wireless.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/driver/src/osdep/bt_intf.h \
+ /home/bsc/ameba-rtos-pro2/component/wifi/api/wifi_ind.h \
+ /home/bsc/ameba-rtos-pro2/component/os/os_dep/include/osdep_service.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf_ntz.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/verify_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/sw_feature_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_service.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/queue.h \
+ /home/bsc/ameba-rtos-pro2/component/os/freertos/freertos_v202012.00/Source/include/timers.h \
+ /home/bsc/ameba-rtos-pro2/component/os/os_dep/include/device_lock.h

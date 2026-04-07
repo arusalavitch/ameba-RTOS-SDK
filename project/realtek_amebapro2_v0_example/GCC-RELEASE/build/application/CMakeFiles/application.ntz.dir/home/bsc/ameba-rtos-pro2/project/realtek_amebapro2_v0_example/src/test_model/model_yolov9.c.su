@@ -1,0 +1,7 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:41:7:yolov9_get_network_filename	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:46:6:yolov9_set_network_init_info	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:58:5:yolov9_preprocess	40	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:218:6:yolov9_set_confidence_thresh	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:224:6:yolov9_set_nms_thresh	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:230:6:yolov9_set_desired_class	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_yolov9.c:177:5:yolov9_postprocess	152	static

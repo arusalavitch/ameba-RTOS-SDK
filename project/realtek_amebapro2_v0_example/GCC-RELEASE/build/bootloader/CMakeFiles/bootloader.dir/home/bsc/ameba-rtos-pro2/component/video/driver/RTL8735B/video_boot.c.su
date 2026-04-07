@@ -1,0 +1,15 @@
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/include/hal_cache.h:155:22:dcache_clean_invalidate_by_addr.constprop	8	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/lib/source/ram/video/hal_video.h:797:23:hal_video_set_isp_init_items.isra	8	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:24:11:video_boot_init_sensor_config	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:29:11:user_load_sensor_boot	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:37:5:video_btldr_init_sensor_process	264	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:80:6:video_boot_setup_slot_num	8	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:91:14:video_boot_malloc	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:108:6:video_boot_set_private_mask	88	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:165:5:video_boot_buf_calc	40	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:264:6:video_boot_calcu_meta_size	40	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:311:5:video_boot_open	184	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:646:12:user_boot_config_init	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:651:11:user_disable_fcs	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:665:5:video_btldr_process	1848	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_boot.c:768:5:video_btldr_fcs_terminated	352	static

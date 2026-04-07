@@ -1,0 +1,4 @@
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wlan_network.c:34:12:wlan_init_start_time	0	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wlan_network.c:38:12:wlan_init_end_time	0	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wlan_network.c:43:6:init_thread	8	static
+/home/bsc/ameba-rtos-pro2/component/wifi/api/wlan_network.c:90:6:wlan_network	16	static

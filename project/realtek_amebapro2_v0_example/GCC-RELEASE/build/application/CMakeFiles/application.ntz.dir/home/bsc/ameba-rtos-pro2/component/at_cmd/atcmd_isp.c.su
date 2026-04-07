@@ -1,0 +1,8 @@
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:536:6:fATIO	0	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:26:6:fATIT	96	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:195:6:fATIX	104	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:101:6:fATIC	96	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:298:6:fATII	1280	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:562:6:fATIR	112	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:654:6:fATIM	384	static
+/home/bsc/ameba-rtos-pro2/component/at_cmd/atcmd_isp.c:797:6:at_isp_init	8	static

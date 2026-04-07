@@ -1,0 +1,2 @@
+/home/bsc/ameba-rtos-pro2/component/network/mqtt/MQTTPacket/MQTTSubscribeServer.c:35:5:MQTTDeserialize_subscribe	40	static
+/home/bsc/ameba-rtos-pro2/component/network/mqtt/MQTTPacket/MQTTSubscribeServer.c:88:5:MQTTSerialize_suback	32	static

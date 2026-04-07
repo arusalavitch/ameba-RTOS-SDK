@@ -1,0 +1,2 @@
+/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/base64.c:44:5:mbedtls_base64_encode	48	static
+/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/base64.c:114:5:mbedtls_base64_decode	40	static

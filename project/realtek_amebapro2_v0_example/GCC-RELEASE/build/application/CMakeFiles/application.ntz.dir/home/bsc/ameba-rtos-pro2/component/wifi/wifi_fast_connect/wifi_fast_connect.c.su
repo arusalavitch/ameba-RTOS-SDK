@@ -1,0 +1,11 @@
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:74:10:crc32	8	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:114:5:write_fast_connect_data_to_flash	888	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:94:5:wifi_check_fast_connect_data	8	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:270:5:wifi_do_fast_connect	352	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:212:6:wifi_set_11v_ch_bssid	56	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:227:6:wifi_set_pno_reconnect_channel	0	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:235:6:wifi_get_pno_disconnect_params	24	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:695:5:check_is_the_same_ap	424	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:721:5:Erase_Fastconnect_data	16	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:738:6:wifi_fast_connect_enable	0	static
+/home/bsc/ameba-rtos-pro2/component/wifi/wifi_fast_connect/wifi_fast_connect.c:768:6:wifi_fast_connect_load_fast_dhcp	16	static

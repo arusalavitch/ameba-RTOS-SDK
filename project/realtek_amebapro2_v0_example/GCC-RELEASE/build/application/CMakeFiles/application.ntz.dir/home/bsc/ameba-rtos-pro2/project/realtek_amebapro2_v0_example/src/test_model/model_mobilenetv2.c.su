@@ -1,0 +1,5 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_mobilenetv2.c:23:14:mbnv2_get_network_filename	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_mobilenetv2.c:28:14:mbnv2_get_network_filename_sdcard	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_mobilenetv2.c:137:12:mbnv2_postprocess	64	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_mobilenetv2.c:42:13:normalize_imagenet.constprop	48	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/model_mobilenetv2.c:62:12:mbnv2_preprocess	56	static

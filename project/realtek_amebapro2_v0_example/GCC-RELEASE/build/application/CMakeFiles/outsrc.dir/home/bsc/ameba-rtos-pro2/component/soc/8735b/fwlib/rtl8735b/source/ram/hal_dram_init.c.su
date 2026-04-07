@@ -1,0 +1,8 @@
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:538:6:hal_dramc_ftend_init	0	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:574:6:hal_dramc_perf_tune	304	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:1080:6:hal_dramc_init	88	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:1810:6:cpu_read_modify_write	0	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:2028:6:hal_ddr2_phy_init	16	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:2266:6:hal_ddr3_phy_init	16	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:2509:6:hal_dram_scramble_ctrl	0	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/fwlib/rtl8735b/source/ram/hal_dram_init.c:2530:6:hal_init_dram	16	static

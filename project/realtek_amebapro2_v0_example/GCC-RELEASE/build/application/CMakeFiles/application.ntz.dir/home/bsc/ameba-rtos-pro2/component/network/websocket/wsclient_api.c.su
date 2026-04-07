@@ -1,0 +1,17 @@
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:121:5:wss_set_fun_ops	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:138:5:ws_set_fun_ops	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:154:6:ws_close	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:168:18:ws_getReadyState	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:173:6:ws_dispatch	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:178:6:ws_poll	136	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:305:5:ws_sendPing	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:312:5:ws_sendBinary	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:323:5:ws_send	16	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:335:5:ws_connect_url	32	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:380:6:ws_setsockopt_keepalive	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:387:6:ws_setsockopt_timeout	0	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:393:5:ws_handshake_header_set_protocol	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:411:5:ws_handshake_header_set_version	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:429:5:ws_handshake_header_custom_token	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:447:5:ws_multisend_opts	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/wsclient_api.c:463:19:create_wsclient	40	static

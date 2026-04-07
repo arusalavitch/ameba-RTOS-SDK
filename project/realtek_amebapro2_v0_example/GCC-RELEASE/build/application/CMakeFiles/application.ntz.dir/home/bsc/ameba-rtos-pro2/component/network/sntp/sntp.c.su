@@ -1,0 +1,14 @@
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:501:1:sntp_retry	8	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:652:1:sntp_send_request	16	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:716:1:sntp_request	16	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:561:1:sntp_recv	32	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:686:1:sntp_dns_found	16	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:150:6:sntp_get_lasttime	12	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:157:6:sntp_set_lasttime	12	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:163:11:sntp_gen_system_time	56	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:189:11:sntp_gen_system_time_s	56	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:265:6:sntp_set_max_tries	0	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:281:5:sntp_set_timeserver	16	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:768:1:sntp_init	16	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:789:1:sntp_stop	8	static
+/home/bsc/ameba-rtos-pro2/component/network/sntp/sntp.c:799:5:atcmd_sntp	24	static

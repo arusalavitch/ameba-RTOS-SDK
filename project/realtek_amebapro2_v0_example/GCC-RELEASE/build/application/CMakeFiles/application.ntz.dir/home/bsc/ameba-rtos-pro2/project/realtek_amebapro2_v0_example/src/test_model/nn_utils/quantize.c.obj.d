@@ -1,0 +1,22 @@
+application/CMakeFiles/application.ntz.dir/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nn_utils/quantize.c.obj: \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nn_utils/quantize.c \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nn_utils/quantize.h \
+ /home/bsc/ameba-rtos-pro2/component/media/mmfv2/mmf2_module.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/diag.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/platform_conf_ntz.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/verify_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/sw_feature_conf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/rtl8735b/include/basic_types.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/log_buf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/rt_printf.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/cmsis-core/include/cmsis_compiler.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/cmsis-core/include/cmsis_gcc.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/rtl_printf/include/printf_entry.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/app/stdio_port/stdio_port.h \
+ /home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/utilities/include/utility.h \
+ /home/bsc/ameba-rtos-pro2/component/media/mmfv2/mmf2_mediatime_8735b.h \
+ /home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_vipnn.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/VIPLiteDrv_2.0.0/include/nbg_linker/vip_lite.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/VIPLiteDrv_2.0.0/include/vip_lite_common.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/test_model/img_process/img_process.h

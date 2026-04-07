@@ -1,0 +1,14 @@
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:37:6:ecdsa_init	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:49:6:ecdsa_cb_irq_handler	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:56:6:ecdsa_set_curve	40	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:77:6:ecdsa_signature	16	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:86:6:ecdsa_verificaion	40	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:101:6:ecdsa_hash	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:108:6:ecdsa_deinit	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:120:5:ecdsa_get_err_sta	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:127:6:ecdsa_get_pbk	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:134:6:ecdsa_get_rs	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:141:6:ecdsa_get_result_x_y	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:148:5:ecdsa_get_veri_result	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:155:6:ecdsa_gen_public_key	8	static
+/home/bsc/ameba-rtos-pro2/component/mbed/targets/hal/rtl8735b/ecdsa_api.c:162:6:ecdsa_select_prk	8	static

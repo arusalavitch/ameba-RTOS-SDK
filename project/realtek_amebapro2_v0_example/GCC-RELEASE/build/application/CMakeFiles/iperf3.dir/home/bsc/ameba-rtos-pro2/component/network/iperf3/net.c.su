@@ -1,0 +1,11 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:63:1:timeout_connect	72	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:144:1:netdial	80	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:210:1:netannounce	88	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:309:1:Nread	40	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:346:1:Nwrite	40	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:385:1:has_sendfile	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:401:1:Nsendfile	8	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:479:1:getsock_tcp_mss	24	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:507:1:set_tcp_options	40	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:552:1:setnonblocking	16	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/net.c:578:1:getsockdomain	32	static

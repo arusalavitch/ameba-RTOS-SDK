@@ -1,0 +1,12 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:76:13:update_time_stats	0	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/test_model/ainr/ulaw_lut.h:298:6:ainr_ulaw_encode	16	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/test_model/ainr/ulaw_lut.h:327:6:ainr_ulaw_decode	12	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/test_model/ainr/ulaw_lut.h:336:6:ainr_ulaw_encode_fast	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../src/test_model/ainr/ulaw_lut.h:356:6:ainr_ulaw_decode_fast	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:62:6:pack_bayer_to_planar	12	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:90:6:ainr_dump_time_stats	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:132:13:ainr_init	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:166:6:ainr_deinit	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:177:5:planar_to_nchw_ppu	48	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:458:5:ainr_process_frame	192	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/ainr/ainr.c:496:6:ainr_example_init	8	static

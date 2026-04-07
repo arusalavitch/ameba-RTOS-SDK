@@ -1,0 +1,5 @@
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_user_boot.c:239:5:boot_get_remap_table_index	16	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_user_boot.c:262:5:boot_get_fcs_remap_block	40	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_user_boot.c:283:5:boot_read_flash_data	32	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_user_boot.c:320:5:user_disable_fcs	0	static
+/home/bsc/ameba-rtos-pro2/component/video/driver/RTL8735B/video_user_boot.c:325:6:user_boot_config_init	2104	static

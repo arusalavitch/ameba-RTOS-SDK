@@ -1,0 +1,15 @@
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:60:17:byteSwap32	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:65:17:byteSwap16	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:70:17:byteCopy32	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:75:17:byteCopy16	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:156:13:i2s_tx_complete	24	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:170:13:i2s_rx_complete	40	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:791:7:i2s_del_item	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:786:7:i2s_new_item	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:372:12:set_i2s_module_init.part.0	32	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:342:13:i2s_rx_handle_thread	80	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:464:12:set_i2s_module_deinit.isra	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:720:7:i2s_destroy	16	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:747:7:i2s_create	24	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:690:5:i2s_handle	64	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_i2s.c:476:5:i2s_control	16	static

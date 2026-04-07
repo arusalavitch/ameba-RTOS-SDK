@@ -1,0 +1,16 @@
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:54:21:ws_arc4random	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:232:6:ws_get_random_bytes	32	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:251:13:ws_malloc	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:256:12:ws_free	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:261:5:ws_random	8	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:270:6:ws_client_close	32	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:371:5:ws_client_read	32	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:390:5:ws_client_send	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:409:5:ws_sendData	56	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:572:5:ws_hostname_connect	88	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:641:5:ws_client_handshake	128	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:664:5:ws_check_handshake	288	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:700:5:wss_hostname_connect	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:748:6:wss_client_close	32	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:844:5:wss_client_read	24	static
+/home/bsc/ameba-rtos-pro2/component/network/websocket/libwsclient.c:865:5:wss_client_send	24	static

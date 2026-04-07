@@ -1,0 +1,12 @@
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:184:14:low_level_output_mii	0	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:418:13:arp_timer	8	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:148:14:low_level_output	272	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:237:6:ethernetif_set_blocked	0	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:242:6:ethernetif_fill_blocked_packet	24	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:261:6:ethernetif_recv	272	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:325:6:ethernetif_mii_recv	0	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:369:7:ethernetif_init	0	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:396:7:ethernetif_mii_init	0	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:430:5:arp_timeout_exist	8	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:445:6:lwip_PRE_SLEEP_PROCESSING	8	static
+/home/bsc/ameba-rtos-pro2/component/lwip/lwip_v2.1.2/port/realtek/freertos/ethernetif.c:454:6:lwip_POST_SLEEP_PROCESSING	8	static

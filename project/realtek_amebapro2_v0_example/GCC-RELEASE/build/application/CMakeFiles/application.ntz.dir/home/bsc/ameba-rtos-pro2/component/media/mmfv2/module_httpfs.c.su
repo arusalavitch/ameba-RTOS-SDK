@@ -1,0 +1,10 @@
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:1010:5:httpfs_handle	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:1060:7:httpfs_new_item	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:1065:7:httpfs_del_item	0	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:982:5:httpfs_control	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:584:13:pb_homepage_cb	520	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:1015:7:httpfs_destroy	8	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:1031:7:httpfs_create	24	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:964:13:example_httpd_thread	16	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:77:5:qt_faststart	56	static
+/home/bsc/ameba-rtos-pro2/component/media/mmfv2/module_httpfs.c:700:13:pb_test_get_cb	152	static

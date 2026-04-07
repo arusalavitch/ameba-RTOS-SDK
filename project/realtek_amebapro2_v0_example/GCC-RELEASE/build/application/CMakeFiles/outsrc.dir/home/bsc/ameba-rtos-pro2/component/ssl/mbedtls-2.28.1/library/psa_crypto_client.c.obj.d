@@ -1,0 +1,34 @@
+application/CMakeFiles/outsrc.dir/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/psa_crypto_client.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/psa_crypto_client.c \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/common.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/mbedtls_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/check_config.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_platform.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/config_psa.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_types.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_values.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_sizes.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_struct.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/cmac.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/cipher.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/platform_util.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/gcm.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_driver_contexts_primitives.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_driver_common.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_sizes.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_builtin_primitives.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/md2.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/md4.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/md5.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ripemd160.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha1.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha256.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/sha512.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_driver_contexts_composites.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_builtin_composites.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_extra.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/psa/crypto_compat.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/ecp.h \
+ /home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/include/mbedtls/bignum.h

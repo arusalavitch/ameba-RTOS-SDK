@@ -1,0 +1,3 @@
+/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/ecdh_alt.c:49:13:ecdsa_irq_callback	16	static
+/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/ecdh_alt.c:135:5:mbedtls_ecdh_gen_public	88	static
+/home/bsc/ameba-rtos-pro2/component/ssl/mbedtls-2.28.1/library/ecdh_alt.c:225:5:mbedtls_ecdh_compute_shared	112	static

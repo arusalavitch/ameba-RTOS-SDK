@@ -1,0 +1,22 @@
+application/CMakeFiles/outsrc.dir/home/bsc/ameba-rtos-pro2/component/bluetooth/rtk_stack/src/ble/privacy/privacy_mgnt.c.obj: \
+ /home/bsc/ameba-rtos-pro2/component/bluetooth/rtk_stack/src/ble/privacy/privacy_mgnt.c \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/platform/trace.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/inc/platform_opts_bt.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/platform/amebapro2/lib/upperstack_config.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/bt_types.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_chann.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/src/ble/privacy/privacy_mgnt.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_bond_le.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_le.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_callback_le.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_storage_le.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_le_types.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/os/os_mem.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/os/osif/mem_types.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_privacy.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_conn_le.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/bluetooth/gap/gap_msg.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/platform/trace_app.h \
+ /home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/GCC-RELEASE/application/../../../../component/bluetooth/rtk_stack/inc/platform/trace.h

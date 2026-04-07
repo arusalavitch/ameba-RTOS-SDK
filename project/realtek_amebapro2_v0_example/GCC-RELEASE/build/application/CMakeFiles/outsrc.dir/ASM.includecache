@@ -1,0 +1,10 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/cmsis/cmsis-dsp/source/TransformFunctions/arm_bitreversal2.S
+

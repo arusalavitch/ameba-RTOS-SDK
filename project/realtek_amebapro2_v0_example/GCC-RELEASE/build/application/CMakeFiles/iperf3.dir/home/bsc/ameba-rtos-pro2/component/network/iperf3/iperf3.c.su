@@ -1,0 +1,3 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf3.c:54:6:server_thread	24	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf3.c:83:6:client_thread	16	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf3.c:120:6:cmd_iperf3	32	static

@@ -1,0 +1,11 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:23:13:nnlite_get_mutex	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:28:13:nnlite_put_mutex	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:267:15:nnlite_deploy_model	48	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:320:5:nnlite_run_model	8	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:350:5:nnlite_deploy_in_tensor	32	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:394:5:nnlite_destroy_in_tensor	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:417:5:nnlite_deploy_out_tensor	32	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:453:7:nnlite_create_out_tensor	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:482:5:nnlite_flush_out_tensor	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:498:5:nnlite_destroy_out_tensor	24	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/test_model/nnlite/nnlite_api.c:301:6:nnlite_destroy_model	8	static

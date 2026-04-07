@@ -1,0 +1,7 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:51:1:iperf_udp_recv	88	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:205:1:iperf_udp_send	56	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:281:1:iperf_udp_buffercheck	0	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:373:1:iperf_udp_accept	48	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:487:1:iperf_udp_listen	8	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:511:1:iperf_udp_connect	56	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_udp.c:616:1:iperf_udp_init	0	static

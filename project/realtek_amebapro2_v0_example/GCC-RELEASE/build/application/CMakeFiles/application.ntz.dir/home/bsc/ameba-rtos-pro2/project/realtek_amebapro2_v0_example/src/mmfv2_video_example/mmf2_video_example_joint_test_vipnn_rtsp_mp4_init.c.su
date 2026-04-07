@@ -1,0 +1,3 @@
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/mmfv2_video_example/mmf2_video_example_joint_test_vipnn_rtsp_mp4_init.c:379:13:nn_set_object	112	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/mmfv2_video_example/mmf2_video_example_joint_test_vipnn_rtsp_mp4_init.c:1009:13:fUC	40	static
+/home/bsc/ameba-rtos-pro2/project/realtek_amebapro2_v0_example/src/mmfv2_video_example/mmf2_video_example_joint_test_vipnn_rtsp_mp4_init.c:462:6:mmf2_video_example_joint_test_vipnn_rtsp_mp4_init	160	static

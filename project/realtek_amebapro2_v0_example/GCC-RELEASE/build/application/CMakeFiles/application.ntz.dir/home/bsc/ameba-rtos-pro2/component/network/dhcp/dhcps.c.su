@@ -1,0 +1,14 @@
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:67:13:mark_ip_in_table	16	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:514:13:dhcps_initialize_message	16	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:1023:13:dnss_receive_udp_packet_handler	40	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:397:15:add_offer_options	64	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:218:16:check_client_direct_request_ip.constprop	32	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:16:6:dhcps_set_compatibilty_enable	0	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:279:6:dump_client_table	0	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:712:9:dhcps_handle_state_machine_change	16	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:913:13:dhcps_receive_udp_packet_handler	120	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:999:6:dhcps_set_addr_pool	0	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:1091:6:dns_server_init	24	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:1126:6:dns_server_deinit	8	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:1141:6:dhcps_init	32	static
+/home/bsc/ameba-rtos-pro2/component/network/dhcp/dhcps.c:1263:6:dhcps_deinit	8	static

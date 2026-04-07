@@ -1,0 +1,5 @@
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_tcp.c:48:1:iperf_tcp_recv	16	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_tcp.c:79:1:iperf_tcp_send	24	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_tcp.c:111:1:iperf_tcp_accept	80	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_tcp.c:149:1:iperf_tcp_listen	72	static
+/home/bsc/ameba-rtos-pro2/component/network/iperf3/iperf_tcp.c:371:1:iperf_tcp_connect	80	static

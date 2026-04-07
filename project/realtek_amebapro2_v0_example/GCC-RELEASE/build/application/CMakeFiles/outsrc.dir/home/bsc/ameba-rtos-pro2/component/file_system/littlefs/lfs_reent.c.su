@@ -1,0 +1,2 @@
+/home/bsc/ameba-rtos-pro2/component/file_system/littlefs/lfs_reent.c:12:5:lfs_system_lock	16	static
+/home/bsc/ameba-rtos-pro2/component/file_system/littlefs/lfs_reent.c:25:5:lfs_system_unlock	16	static

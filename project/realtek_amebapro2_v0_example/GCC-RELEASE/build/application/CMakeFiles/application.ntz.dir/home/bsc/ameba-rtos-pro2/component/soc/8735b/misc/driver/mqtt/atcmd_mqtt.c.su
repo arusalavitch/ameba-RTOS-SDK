@@ -1,0 +1,6 @@
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:38:17:atcmd_mqtt_read_buffer	0	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:21:17:atcmd_mqtt_write_buffer	32	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:43:5:atcmd_mqtt_process	24	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:105:6:atcmd_mqtt_set_client	0	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:111:6:atcmd_mqtt_init	8	static
+/home/bsc/ameba-rtos-pro2/component/soc/8735b/misc/driver/mqtt/atcmd_mqtt.c:128:6:atcmd_mqtt_deinit	16	static
